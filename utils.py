@@ -20,6 +20,7 @@
 
 import logging
 
+import telegram
 from telegram.ext.dispatcher import run_async
 
 from internationalization import _, __

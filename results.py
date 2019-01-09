@@ -199,14 +199,18 @@ def add_card(game, card, results, can_play):
 
 def game_info(game):
     players = player_list(game)
+    players_numbered = [
+        '{}. {}'.format(i + 1, p)
+        for i, p in enumerate(players)
+    ]
     return InputTextMessageContent(
         _("Current player: {name}")
         .format(name=display_name(game.current_player.user)) +
         "\n" +
         _("Last card: {card}").format(card=repr(game.last_card)) +
         "\n" +
-        _("Player: {player_list}",
-          "Players: {player_list}",
+        _("Player: \n{player_list}",
+          "Players: \n{player_list}",
           len(players))
-        .format(player_list=" -> ".join(players))
+        .format(player_list="\n".join(players_numbered))
     )
