@@ -69,7 +69,7 @@ msgstr ""
 #: bot.py:88
 msgid "This bot is Free Software and licensed under the AGPL. The code is available "
 "here: \n"
-"https://github.com/jh0ker/mau_mau_bot"
+"https://github.com/UNOBR/uno_bot"
 msgstr ""
 
 #: bot.py:133
