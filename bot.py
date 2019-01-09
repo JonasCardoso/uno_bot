@@ -42,7 +42,7 @@ from simple_commands import help_handler
 from start_bot import start_bot
 from utils import display_name
 from utils import send_async, answer_async, error, TIMEOUT, user_is_creator_or_admin, user_is_creator, game_is_running
-
+from user_setting import UserSetting
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -68,6 +68,14 @@ def notify_me(bot, update):
 
 @user_locale
 def new_game(bot, update):
+
+#Start DB
+    us = UserSetting.get(id=update.message.from_user.id)
+
+    if not us:
+        us = UserSetting(id=update.message.from_user.id)
+#Start DB
+
     """Handler for the /new command"""
     chat_id = update.message.chat_id
 
@@ -132,6 +140,14 @@ def kill_game(bot, update):
 
 @user_locale
 def join_game(bot, update):
+
+#Start DB
+    us = UserSetting.get(id=update.message.from_user.id)
+
+    if not us:
+        us = UserSetting(id=update.message.from_user.id)
+#Start DB
+
     """Handler for the /join command"""
     chat = update.message.chat
 
@@ -358,6 +374,14 @@ def status_update(bot, update):
 @game_locales
 @user_locale
 def start_game(bot, update, args, job_queue):
+
+#Start DB
+    us = UserSetting.get(id=update.message.from_user.id)
+
+    if not us:
+        us = UserSetting(id=update.message.from_user.id)
+#Start DB
+
     """Handler for the /start command"""
 
     if update.message.chat.type != 'private':
@@ -433,6 +457,14 @@ def start_game(bot, update, args, job_queue):
 
 @user_locale
 def close_game(bot, update):
+
+#Start DB
+    us = UserSetting.get(id=update.message.from_user.id)
+
+    if not us:
+        us = UserSetting(id=update.message.from_user.id)
+#Start DB
+
     """Handler for the /close command"""
     chat = update.message.chat
     user = update.message.from_user
@@ -461,6 +493,14 @@ def close_game(bot, update):
 
 @user_locale
 def open_game(bot, update):
+
+#Start DB
+    us = UserSetting.get(id=update.message.from_user.id)
+
+    if not us:
+        us = UserSetting(id=update.message.from_user.id)
+#Start DB
+
     """Handler for the /open command"""
     chat = update.message.chat
     user = update.message.from_user
