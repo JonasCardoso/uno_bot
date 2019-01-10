@@ -103,6 +103,20 @@ msgstr ""
 "disponível aqui:\n"
 "https://github.com/jh0ker/mau_mau_bot"
 
+#: simple_commands.py
+msgid ""
+"This UNO bot has three game modes: Classic, Sanic and Wild.\n\n"
+" 🎻 The Classic mode uses the conventional UNO deck and there is no auto skip.\n"
+" 🚀 The Sanic mode uses the conventional UNO deck and the bot automatically skips a player if he/she takes too long to play its turn\n"
+" 🐉 The Wild mode uses a deck with more special cards, less number variety and no auto skip.\n\n"
+"To change the game mode, the GAME CREATOR has to type the bot nickname and a space, just like when playing a card, and all gamemode options should appear."
+msgstr ""
+"Esse bot do UNO tem três modos: Classic, Sanic e Wild.\n\n"
+" 🎻 O modo Classic usa o deck convencional do UNO e não tem skip automático.\n"
+" 🚀  O modo  Sanic usa o deck convencional do UNO e o bot automaticamente pula um jogador se ele/ela demorarem para jogar.\n"
+" 🐉O modo Wild usa o deck com mais cartas especiais, menos variedade de números e sem auto skip.\n\n"
+"Para mudar o modo de jogo, o CRIADOR DO JOGO tem que digitar o nickname do bot e um espaço, da mesma forma que se joga um carta, e todos modos do jogo devem aparecer."
+
 #: bot.py:133
 msgid ""
 "Created a new game! Join the game with /join and start the game with /start"
@@ -374,12 +388,12 @@ msgstr "Inicie a partida com /start"
 #: results.py:108
 #, python-format
 msgid "Drawing 1 card"
-msgstr "Sacando 1 carta"
+msgstr "Comprando 1 carta"
 
 msgid "Drawing {number} card"
 msgid_plural "Drawing {number} cards"
-msgstr[0] "Sacando {number} carta"
-msgstr[1] "Sacando {number} cartas"
+msgstr[0] "Comprando {number} carta"
+msgstr[1] "Comprando {number} cartas"
 
 #: results.py:136
 msgid "Pass"
@@ -445,6 +459,18 @@ msgid "{number} first place"
 msgid_plural "{number} first places"
 msgstr[0] "{number} vez em primeiro lugar"
 msgstr[1] "{number} vezes em primeiro lugar"
+
+#: simple_commands.py
+msgid "{number}% win percentage"
+msgid_plural "{number}% win percentage"
+msgstr[0] "{number}% de vitória"
+msgstr[1] "{number}% de vitórias"
+
+#: simple_commands.py
+msgid "{number} last place"
+msgid_plural "{number} last places"
+msgstr[0] "{number} vez em último lugar"
+msgstr[1] "{number} vezes em último lugar"
 
 #: simple_commands.py
 msgid "{number} card played"
