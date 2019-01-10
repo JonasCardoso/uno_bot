@@ -7,21 +7,5 @@ function compile {
 	cd ../../
 }
 
-# Deutsch
-compile de_DE
-# Spanish
-compile es_ES
-# Indonesian
-compile id_ID
-# Italian
-compile it_IT
 # Portuguese
 compile pt_BR
-# Russian
-compile ru_RU
-# Simplified Chinese
-compile zh_CN
-# Chinese (Honk Kong) 
-compile zh_HK
-# Traditional Chinese
-compile zh_TW
