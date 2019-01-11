@@ -86,7 +86,7 @@ def __(singular, plural=None, n=1, multi=False):
     translations = list()
 
     if not multi and len(set(_.locale_stack)) >= 1:
-        translations.append(_(singular, plural, n, 'en_US'))
+        translations.append(_(singular, plural, n, 'pt_BR'))
 
     else:
         for locale in _.locale_stack:
@@ -107,10 +107,10 @@ def user_locale(func):
         with db_session:
             us = UserSetting.get(id=user.id)
 
-        if us and us.lang != 'en':
+        if us and us.lang != 'pt':
             _.push(us.lang)
         else:
-            _.push('en_US')
+            _.push('pt_BR')
 
         result = func(bot, update, *pargs, **kwargs)
         _.pop()
@@ -130,10 +130,10 @@ def game_locales(func):
             for player in player.game.players:
                 us = UserSetting.get(id=player.user.id)
 
-                if us and us.lang != 'en':
+                if us and us.lang != 'pt':
                     loc = us.lang
                 else:
-                    loc = 'en_US'
+                    loc = 'pt_BR'
 
                 if loc in locales:
                     continue
