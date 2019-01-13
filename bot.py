@@ -282,18 +282,20 @@ def kick_player(bot, update):
             except NotEnoughPlayersError:
                 gm.end_game(chat, user)
                 send_async(bot, chat.id,
-                                text=_("{0} was kicked by {1}".format(display_name(kicked), display_name(user))))
+                                text=__("{0} was kicked by {1}", 
+                                multi=game.translate).format(display_name(kicked), display_name(user)))
                 send_async(bot, chat.id, text=__("Game ended!", multi=game.translate))
                 return
 
             send_async(bot, chat.id,
-                            text=_("{0} was kicked by {1}".format(display_name(kicked), display_name(user))))
+                            text=__("{0} was kicked by {1}",                               
+                            multi=game.translate).format(display_name(kicked), display_name(user)))
 
         else:
             send_async(bot, chat.id,
-                text=_("Please reply to the person you want to kick and type /kick again. "
-                       "Note that replying to the bot causes the current player to be kicked."),
-                reply_to_message_id=update.message.message_id)
+                text=__("Please reply to the person you want to kick and type /kick again. "
+                        "Note that replying to the bot causes the current player to be kicked.",
+                         multi=game.translate), reply_to_message_id=update.message.message_id)
             return
 
         send_async(bot, chat.id,

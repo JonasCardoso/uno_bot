@@ -48,10 +48,10 @@ def do_skip(bot, player, job_queue=None):
 
         n = skipped_player.waiting_time
         send_async(bot, chat.id,
-                   text="Waiting time to skip this player has "
-                        "been reduced to {time} seconds.\n"
-                        "Next player: {name}"
-                   .format(time=n,
+                   text=__("Waiting time to skip this player has "
+                         "been reduced to {time} seconds.\n"
+                         "Next player: {name}",
+                          multi=game.translate).format(time=n,
                            name=display_name(next_player.user))
             )
         logger.info("{player} was skipped!. "
@@ -72,10 +72,10 @@ def do_skip(bot, player, job_queue=None):
         try:
             gm.leave_game(skipped_player.user, chat)
             send_async(bot, chat.id,
-                       text="{name1} ran out of time "
+                       text=__("{name1} ran out of time "
                             "and has been removed from the game!\n"
-                            "Next player: {name2}"
-                       .format(name1=display_name(skipped_player.user),
+                            "Next player: {name2}",
+                            multi=game.translate).format(name1=display_name(skipped_player.user),
                                name2=display_name(next_player.user)))
             logger.info("{player} was skipped!. "
                     .format(player=display_name(player.user)))
@@ -84,10 +84,10 @@ def do_skip(bot, player, job_queue=None):
 
         except NotEnoughPlayersError:
             send_async(bot, chat.id,
-                       text="{name} ran out of time "
+                       text=__("{name} ran out of time "
                                "and has been removed from the game!\n"
-                               "The game ended."
-                       .format(name=display_name(skipped_player.user)))
+                               "The game ended.",
+                               multi=game.translate).format(name=display_name(skipped_player.user)))
 
             gm.end_game(chat, skipped_player.user)
 
