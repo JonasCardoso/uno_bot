@@ -291,8 +291,8 @@ msgstr "Call咗bluff, {name} draw 4張牌"
 
 #: bot.py:639
 #, python-format
-msgid "{name1} didn't bluff! Giving 6 cards to {name2}"
-msgstr "{name1}冇bluff, {name2} draw 6 張牌"
+msgid "{name1} didn't bluff! Giving {cards} cards to {name2}"
+msgstr "{name1}冇bluff, {name2} draw {cards} 張牌"
 
 #: results.py:38
 msgid "Choose Color"

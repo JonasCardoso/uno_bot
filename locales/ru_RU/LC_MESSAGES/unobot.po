@@ -317,8 +317,8 @@ msgstr "Это блеф! {name} получает 4 карты."
 
 #: bot.py:639
 #, python-format
-msgid "{name1} didn't bluff! Giving 6 cards to {name2}"
-msgstr "{name1} не блефовал! {name2} получает 6 карт."
+msgid "{name1} didn't bluff! Giving {cards} cards to {name2}"
+msgstr "{name1} не блефовал! {name2} получает {cards} карт."
 
 #: results.py:38
 msgid "Choose Color"

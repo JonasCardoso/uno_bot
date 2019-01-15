@@ -344,8 +344,8 @@ msgstr "Blefe revelado! Dando 4 cartas para {name}"
 
 #: bot.py:639
 #, python-format
-msgid "{name1} didn't bluff! Giving 6 cards to {name2}"
-msgstr "{name1} não blefou! Dando 6 cartas para {name2}"
+msgid "{name1} didn't bluff! Giving {cards} cards to {name2}"
+msgstr "{name1} não blefou! Dando {cards} cartas para {name2}"
 
 #: results.py:38
 msgid "Choose Color"

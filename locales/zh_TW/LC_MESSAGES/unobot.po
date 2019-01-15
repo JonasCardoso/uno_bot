@@ -295,7 +295,7 @@ msgstr "已確認為虛張聲勢! 給予 {name} 4 張牌"
 
 #: bot.py:639
 #, python-format
-msgid "{name1} didn't bluff! Giving 6 cards to {name2}"
+msgid "{name1} didn't bluff! Giving {cards} cards to {name2}"
 msgstr "{name1} 沒有虛張聲勢! 給予 {name2} 六張牌"
 
 #: results.py:38

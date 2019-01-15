@@ -316,8 +316,8 @@ msgstr "Ternyata hanya gertakan! Memberikan 4 kartu kepada {name}"
 
 #: bot.py:639
 #, python-format
-msgid "{name1} didn't bluff! Giving 6 cards to {name2}"
-msgstr "{name1} tidak hanya menggertak! Memberikan 6 kartu kepada {name2}"
+msgid "{name1} didn't bluff! Giving {cards} cards to {name2}"
+msgstr "{name1} tidak hanya menggertak! Memberikan {cards} kartu kepada {name2}"
 
 #: results.py:38
 msgid "Choose Color"

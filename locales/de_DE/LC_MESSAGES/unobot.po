@@ -322,8 +322,8 @@ msgstr "Bluff gecalled! {name} bekommt 4 Karten."
 
 #: bot.py:639
 #, python-format
-msgid "{name1} didn't bluff! Giving 6 cards to {name2}"
-msgstr "{name1} hat nicht geblufft! {name2} bekommt 6 Karten."
+msgid "{name1} didn't bluff! Giving {cards} cards to {name2}"
+msgstr "{name1} hat nicht geblufft! {name2} bekommt {cards} Karten."
 
 #: results.py:38
 msgid "Choose Color"

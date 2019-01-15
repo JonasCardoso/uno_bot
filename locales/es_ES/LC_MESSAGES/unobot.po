@@ -312,8 +312,8 @@ msgstr "¡Era un farol! {name} recibe 4 cartas."
 
 #: bot.py:639
 #, python-format
-msgid "{name1} didn't bluff! Giving 6 cards to {name2}"
-msgstr "¡{name1} no se había tirado un farol!, {name2} recibe 6 cartas."
+msgid "{name1} didn't bluff! Giving {cards} cards to {name2}"
+msgstr "¡{name1} no se había tirado un farol!, {name2} recibe {cards} cartas."
 
 #: results.py:38
 msgid "Choose Color"

@@ -292,8 +292,8 @@ msgstr "质疑成功！给 {name} 4 张牌"
 
 #: bot.py:639
 #, python-format
-msgid "{name1} didn't bluff! Giving 6 cards to {name2}"
-msgstr "质疑 {name1} 失败！给 {name2} 6 张牌"
+msgid "{name1} didn't bluff! Giving {cards} cards to {name2}"
+msgstr "质疑 {name1} 失败！给 {name2} {cards} 张牌"
 
 #: results.py:38
 msgid "Choose Color"

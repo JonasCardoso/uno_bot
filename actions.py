@@ -171,7 +171,15 @@ def do_call_bluff(bot, player):
                    .format(name=player.prev.user.first_name))
 
         try:
-            player.prev.draw()
+            if game.draw_counter == 4:
+                play.prev.draw()
+
+            elif player.prev():
+                game.draw_counter = 4
+                player.prev.draw()
+
+                game.draw_counter -= 4
+                player.draw()
         except DeckEmptyError:
             send_async(bot, player.game.chat.id,
                        text=__("There are no more cards in the deck.",
@@ -180,9 +188,10 @@ def do_call_bluff(bot, player):
     else:
         game.draw_counter += 2
         send_async(bot, chat.id,
-                   text=__("{name1} didn't bluff! Giving 6 cards to {name2}",
+                   text=__("{name1} didn't bluff! Giving {cards} cards to {name2}",
                            multi=game.translate)
                    .format(name1=player.prev.user.first_name,
+                           cards=game.draw_counter,
                            name2=player.user.first_name))
         try:
             player.draw()

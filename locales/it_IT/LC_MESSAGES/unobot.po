@@ -313,8 +313,8 @@ msgstr "Il baro è stato scoperto! {name} deve pescare 4 carte!"
 
 #: bot.py:639
 #, python-format
-msgid "{name1} didn't bluff! Giving 6 cards to {name2}"
-msgstr "{name1} non ha barato! {name2} deve pescare 6 carte!"
+msgid "{name1} didn't bluff! Giving {cards} cards to {name2}"
+msgstr "{name1} non ha barato! {name2} deve pescare {cards} carte!"
 
 #: results.py:38
 msgid "Choose Color"

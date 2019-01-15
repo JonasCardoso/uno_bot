@@ -263,7 +263,7 @@ msgstr ""
 
 #: bot.py:639
 #, python-format
-msgid "{name1} didn't bluff! Giving 6 cards to {name2}"
+msgid "{name1} didn't bluff! Giving {cards} cards to {name2}"
 msgstr ""
 
 #: results.py:38
