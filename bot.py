@@ -758,8 +758,8 @@ def reset_waiting_time(bot, player):
     if player.waiting_time < WAITING_TIME:
         player.waiting_time = WAITING_TIME
         send_async(bot, chat.id,
-                   text=__("Waiting time for {name} has been reset to {time} "
-                           "seconds", multi=player.game.translate)
+                   text=__("Waiting time for {name} has been reset to {time} seconds", 
+                    multi=player.game.translate)
                    .format(name=display_name(player.user), time=WAITING_TIME))
 
 

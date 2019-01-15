@@ -319,11 +319,6 @@ msgstr "Tentativa de trapaça por {name}"
 msgid "Next player: {name}"
 msgstr "Próximo jogador: {name}"
 
-#: bot.py:572
-#, python-format
-msgid "Waiting time for {name} has been reset to 90 seconds"
-msgstr "O tempo de espera para {name} é novamente de 90 segundos."
-
 #: bot.py:585
 msgid "Please choose a color"
 msgstr "Por favor, escolha uma cor"
@@ -512,8 +507,8 @@ msgid "Only the game creator ({name}) and admin can do that."
 msgstr "Apenas o criador do jogo ({name}) e o admin podem fazer isso."
 
 #: bot.py
-msgid "Waiting time for {name} has been reset to {time} "
-msgstr "O tempo de espera para {name} foi resetado para {time} "
+msgid "Waiting time for {name} has been reset to {time} seconds"
+msgstr "O tempo de espera para {name} foi resetado para {time} segundos"
 
 #: bot.py
 msgid "{0} was kicked by {1}"
@@ -525,15 +520,27 @@ msgstr "A cor foi aleatoriamente escolhida para: {col}"
 
 #: results.py
 msgid "Into the Wild~ 🐉"
-msgstr "Modo de jogo alterado para Wild 🐉"
+msgstr "Wild  🐉"
 
 #: results.py
 msgid "Classic 🎻"
-msgstr "Modo de jogo alterado para Classic 🎻"
+msgstr "Classic 🎻"
 
 #: results.py
 msgid "Gotta go fast! 🚀"
-msgstr "Modo de jogo alterado para Fast 🚀"
+msgstr "Fast 🚀"
+
+#: 
+msgid "🐉 Wild mode"
+msgstr "🐉  Modo de jogo Wild "
+
+#: 
+msgid "🎻 Classic mode"
+msgstr "🎻  Modo de jogo Classic "
+
+#: 
+msgid "🚀 Sanic mode"
+msgstr "🚀  Modo de jogo Fast"
 
 #: bot.py
 msgid "Gamemode changed to classic"
@@ -550,7 +557,7 @@ msgstr "Modo de jogo alterado para Wild 🐉"
 #: results.py
 msgid "Card (tap for game state):"
 msgid_plural "Cards (tap for game state):"
-msgstr[0] "Carta (toque para obter o estado do jogo:"
+msgstr[0] "Carta (toque para obter o estado do jogo):"
 msgstr[1] "Cartas (toque para obter o estado do jogo):"
 
 #: bot.py
