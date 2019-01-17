@@ -607,7 +607,12 @@ def skip_player(bot, update):
 
     # You can't skip if the current player still has time left
     # You can skip yourself even if you have time left (you'll still draw)
-    if delta < skipped_player.waiting_time and player != skipped_player:
+    # Admin and creator can skip current player anytime
+
+    if user.id in game.owner:
+        do_skip(bot, player)
+
+    elif delta < skipped_player.waiting_time and player != skipped_player:
         n = skipped_player.waiting_time - delta
         send_async(bot, chat.id,
                    text=_("Please wait {time} second",
@@ -615,9 +620,9 @@ def skip_player(bot, update):
                           n)
                    .format(time=n),
                    reply_to_message_id=update.message.message_id)
+
     else:
         do_skip(bot, player)
-
 
 @game_locales
 @user_locale
