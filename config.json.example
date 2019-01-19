@@ -1,12 +1,13 @@
 {
     "token": "token_here",
     "admin_list": [0],
+    "win_list": [0],
     "open_lobby": true,
-    "enable_translations": false,
+    "enable_translations": true,
     "workers": 32,
-    "default_gamemode": "fast",
+    "default_gamemode": "wild",
     "waiting_time": 60,
-    "time_removal_after_skip": 20,
+    "time_removal_after_skip": 15,
     "min_fast_turn_time": 15,
     "min_players": 2
 }
