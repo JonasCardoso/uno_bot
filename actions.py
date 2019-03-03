@@ -128,7 +128,8 @@ def do_play_card(bot, player, result_id):
                 us.first_places += 1
 
         game.players_won += 1
-
+        game.players_won_list.append(player.prev.user.id)
+		
         try:
             if last.special == c.CHOOSE or last.special == c.DRAW_FOUR:
                 game.last_card.color = random.choice(c.COLORS)

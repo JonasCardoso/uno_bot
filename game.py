@@ -19,7 +19,7 @@
 
 
 import logging
-from config import ADMIN_LIST, OPEN_LOBBY, DEFAULT_GAMEMODE, ENABLE_TRANSLATIONS
+from config import WIN_LIST, ADMIN_LIST, OPEN_LOBBY, DEFAULT_GAMEMODE, ENABLE_TRANSLATIONS
 from datetime import datetime
 import random
 
@@ -35,6 +35,7 @@ class Game(object):
     started = False
     draw_counter = 0
     players_won = 0
+    players_won_list = WIN_LIST
     starter = None
     mode = DEFAULT_GAMEMODE
     job = None

@@ -26,6 +26,7 @@ with open("config.json","r") as f:
 TOKEN=config.get("token")
 WORKERS=config.get("workers", 32)
 ADMIN_LIST = config.get("admin_list", None)
+WIN_LIST = config.get("win_list", None)
 OPEN_LOBBY = config.get("open_lobby", True)
 ENABLE_TRANSLATIONS = config.get("enable_translations", False)
 DEFAULT_GAMEMODE = config.get("default_gamemode", "fast")
