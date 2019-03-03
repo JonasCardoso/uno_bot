@@ -100,7 +100,8 @@ def do_play_card(bot, player, result_id):
     game = player.game
     chat = game.chat
     user = player.user
-
+    last = player.game.last_card
+	
     us = UserSetting.get(id=user.id)
     if not us:
         us = UserSetting(id=user.id)
@@ -109,7 +110,8 @@ def do_play_card(bot, player, result_id):
         us.cards_played += 1
 
     if game.choosing_color:
-        send_async(bot, chat.id, text=_("Please choose a color"))
+         if len(player.cards) >= 1:
+            send_async(bot, chat.id, text=_("Please choose a color"))
 
     if len(player.cards) == 1:
         send_async(bot, chat.id, text="UNO!")
@@ -128,6 +130,13 @@ def do_play_card(bot, player, result_id):
         game.players_won += 1
 
         try:
+            if last.special == c.CHOOSE or last.special == c.DRAW_FOUR:
+                game.last_card.color = random.choice(c.COLORS)
+                send_async(bot, chat.id,
+                           text=__("Color randomly choosen to: {col}",
+                                   multi=game.translate).format(
+                               col=c.COLOR_ICONS[game.last_card.color]))
+							   
             gm.leave_game(user, chat)
         except NotEnoughPlayersError:
             send_async(bot, chat.id,
